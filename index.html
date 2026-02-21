@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>LEOPARD FREE PANEL</title>
+    <style>
+        /* พื้นหลังดำสนิท */
+        body { 
+            background-color: #000; 
+            margin: 0; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh; 
+            font-family: sans-serif;
+            color: #fff;
+        }
+
+        /* พาแนลขอบเหลืองนูนตามต้นฉบับ */
+        .panel { 
+            width: 320px; 
+            background-color: #000; 
+            border: 4px solid #ffcc00; 
+            border-radius: 15px; 
+            padding: 25px; 
+            box-shadow: 0 0 20px #ffcc00; 
+            box-sizing: border-box;
+        }
+
+        h2 { 
+            color: #ffcc00; 
+            text-align: center; 
+            margin-top: 0;
+            margin-bottom: 30px; 
+            font-size: 24px;
+            text-shadow: 0 0 10px #ffcc00;
+        }
+
+        /* รายการเมนูฟังก์ชันเดิม */
+        .item { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            margin-bottom: 25px; 
+        }
+
+        .item span { 
+            font-size: 18px; 
+            font-weight: bold;
+        }
+
+        /* ปุ่มสวิตช์ Toggle ขนาดใหญ่ กดง่าย */
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 50px;
+            height: 26px;
+        }
+
+        .switch input { opacity: 0; width: 0; height: 0; }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-color: #444;
+            transition: .4s;
+            border-radius: 34px;
+            border: 1px solid #ffcc00;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 18px;
+            width: 18px;
+            left: 4px;
+            bottom: 3px;
+            background-color: #fff;
+            transition: .4s;
+            border-radius: 50%;
+        }
+
+        /* ตอนเปิดสวิตช์ */
+        input:checked + .slider { background-color: #ffcc00; }
+        input:checked + .slider:before { 
+            transform: translateX(22px); 
+            background-color: #000;
+        }
+
+        /* ปุ่มกดด้านล่าง */
+        .btn {
+            width: 100%;
+            padding: 15px;
+            margin-top: 10px;
+            background: #ffcc00;
+            color: #000;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 18px;
+            cursor: pointer;
+            box-shadow: 0 0 10px #ffcc00;
+        }
+
+        .btn:active {
+            transform: scale(0.98);
+            background: #e6b800;
+        }
+    </style>
+</head>
+<body>
+
+<div class="panel">
+    <h2>LEOPARD FREE PANEL</h2>
+
+    <div class="item"><span>ดูดหัวแรง</span><label class="switch"><input type="checkbox"><span class="slider"></span></label></div>
+    <div class="item"><span>กระสุนตรง</span><label class="switch"><input type="checkbox"><span class="slider"></span></label></div>
+    <div class="item"><span>กันดำกันแบน</span><label class="switch"><input type="checkbox" checked><span class="slider"></span></label></div>
+    <div class="item"><span>บายพาส 1</span><label class="switch"><input type="checkbox"><span class="slider"></span></label></div>
+    <div class="item"><span>บายพาส 2</span><label class="switch"><input type="checkbox"><span class="slider"></span></label></div>
+
+    <button class="btn" onclick="alert('STARTING...')">START CHEAT</button>
+</div>
+
+</body>
+  </html>
