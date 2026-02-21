@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEOPARD FREE PANEL</title>
+    <style>
+        body { background-color: #0a0a0a; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; font-family: 'Tahoma', sans-serif; }
+        
+        /* ตัวพาแนลหลัก ขอบเหลืองนูน */
+        .panel { 
+            width: 320px; 
+            background-color: #000; 
+            border: 2px solid #ffcc00; 
+            border-radius: 10px; 
+            padding: 15px; 
+            box-shadow: 0 0 15px #ffcc0044; 
+            color: white; 
+            text-align: center;
+        }
+
+        h2 { color: #ffcc00; font-size: 18px; margin-bottom: 20px; text-transform: uppercase; }
+
+        /* ส่วนของ Dropdown (เมนูเลือก) */
+        .select-label { display: block; text-align: left; font-size: 13px; margin-bottom: 5px; color: #ccc; }
+        
+        select {
+            width: 100%;
+            padding: 10px;
+            background: #1a1a1a;
+            color: white;
+            border: 1px solid #333;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            outline: none;
+            cursor: pointer;
+        }
+
+        /* ตกแต่งตอนเลือก (สีฟ้าตามรูปที่พี่ส่งมา) */
+        select option:checked {
+            background-color: #007bff !important;
+            color: white;
+        }
+
+        /* รายการสวิตช์เปิด-ปิด */
+        .menu-item { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+        .switch { position: relative; width: 36px; height: 18px; }
+        .switch input { opacity: 0; width: 0; height: 0; }
+        .slider { position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #333; transition: .4s; border-radius: 20px; }
+        .slider:before { position: absolute; content: ""; height: 12px; width: 12px; left: 3px; bottom: 3px; background-color: white; transition: .4s; border-radius: 50%; }
+        input:checked + .slider { background-color: #ff3300; } /* สีแดงตอนเปิดตามรูป */
+        input:checked + .slider:before { transform: translateX(18px); }
+
+        /* ปุ่มด้านล่าง */
+        .btn-group { display: flex; gap: 10px; margin-top: 15px; }
+        .btn { flex: 1; padding: 10px; border: 1px solid #ffcc00; background: transparent; color: white; border-radius: 5px; cursor: pointer; font-size: 12px; }
+        .btn:hover { background: #ffcc00; color: black; }
+
+        .status { border: 1px solid #333; padding: 5px; margin-top: 15px; font-size: 12px; color: #888; text-align: left; }
+        .status span { color: #ff3300; }
+    </style>
+</head>
+<body>
+
+<div class="panel">
+    <h2>LEOPARD FREE PANEL</h2>
+
+    <label class="select-label">เลือกรุ่นเครื่อง</label>
+    <select>
+        <option>กดเลือกตรงนี้</option>
+        <option>Android</option>
+        <option>IOS</option>
+    </select>
+
+    <label class="select-label">เลือกโหมดดูดหัว</label>
+    <select>
+        <option>กดเลือกตรงนี้</option>
+        <option>ดูดหัวแรง</option>
+        <option>ช่วยลาก</option>
+        <option>ช่วยดูด</option>
+    </select>
+
+    <div class="menu-item">
+        <span>กันดำกันแบนหนาๆ</span>
+        <label class="switch"><input type="checkbox" checked><span class="slider"></span></label>
+    </div>
+
+    <div class="btn-group">
+        <button class="btn">⚙️ BYPASS</button>
+        <button class="btn">🎯 AIMBOT</button>
+    </div>
+
+    <div class="status">STATUS : <span>Waiting...</span></div>
+</div>
+
+</body>
+      </html>
